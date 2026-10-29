@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The catalogue — 18 machines NASA left behind | Abandoned but not Forgotten</title>
+<meta name="description" content="Every lander, rover and probe in the story: where it sits, when it went quiet, what science it made possible, and the NASA page it comes from.">
+<meta name="theme-color" content="#04060b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230b3d91'/%3E%3Ccircle cx='12' cy='12' r='6' fill='%23dfe8f5'/%3E%3Ccircle cx='21' cy='21' r='5' fill='%237a4b34'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body class="page-catalog">
+
+<div id="loader">
+  <div class="loader-in">
+    <div class="loader-top"><b>The catalogue</b><span>18 machines</span></div>
+    <div class="loader-bar"><i id="loader-fill"></i></div>
+    <div class="loader-top" style="margin-top:12px"><span id="loader-status">opening the drawer</span><span id="loader-pct">00</span></div>
+  </div>
+</div>
+
+<header class="nav is-solid" id="site-head">
+  <div class="nav__in">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span>Abandoned but<br>not Forgotten<small>Space Apps 2026</small></span>
+    </a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="index.html#flight">The flight</a>
+      <a href="index.html#hall">The hall</a>
+      <a href="index.html#explorer">Where they are</a>
+      <a href="index.html#signal">Listening room</a>
+      <a href="catalog.html" aria-current="page">Catalogue</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav__cta">
+      <button class="motion" type="button" data-motion-toggle aria-label="Motion level: Balanced">
+        <span class="motion__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="motion__txt"><b data-motion-label>Balanced</b><small>motion</small></span>
+      </button>
+      <a class="btn btn--sm btn--primary" href="index.html#hall"><span class="dot"></span>Turn one in 3D</a>
+    </div>
+    <button class="burger" data-nav-toggle aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="sheet" id="nav-sheet">
+  <div class="wrap">
+    <a href="index.html#flight">The flight</a>
+    <a href="index.html#hall">The artifact hall</a>
+    <a href="index.html#explorer">Where they are now</a>
+    <a href="index.html#signal">Listening room</a>
+    <a href="index.html#timeline">Timeline</a>
+    <a href="catalog.html">The catalogue</a>
+    <a href="about.html">About this build</a>
+    <button class="sheet-motion" type="button" data-motion-toggle aria-label="Motion level: Balanced">
+      <span>Motion level<small>tap to change</small></span><b data-motion-label>Balanced</b>
+    </button>
+  </div>
+</div>
+
+<main>
+<section class="page-head">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Home</a><span>/</span><span>Catalogue</span></div>
+    <p class="kicker kicker--red">Abandoned but not Forgotten · Space Apps Challenge 2026</p>
+    <h1 class="display" style="max-width:24ch">Eighteen machines. Six on the Moon, ten on Mars, two leaving the solar system.</h1>
+    <p class="lede" style="margin-top:22px">Each card tells you where the machine sits, whether it is still talking, and what its science changed. Open one to turn the hardware in 3D, read the story, and jump to the NASA page behind every fact.</p>
+    <div class="tag-row">
+      <span class="tag tag--silent">14 silent or out of power</span>
+      <span class="tag tag--active">2 still working</span>
+      <span class="tag tag--travelling">2 still flying</span>
+      <span class="tag">1966 → today</span>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight" id="catalog">
+  <div class="wrap">
+    <div class="catalog-toolbar">
+      <div class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
+        <input type="search" id="catalog-search" placeholder="Search: rover, helicopter, Surveyor, 2019, dust storm…" aria-label="Search the catalogue">
+      </div>
+      <div class="filters">
+        <em>Where</em>
+        <button class="chip is-active" data-filter-body="all">Everything</button>
+        <button class="chip" data-filter-body="moon">The Moon (6)</button>
+        <button class="chip" data-filter-body="mars">Mars (10)</button>
+        <button class="chip" data-filter-body="deep">Deep space (2)</button>
+      </div>
+      <div class="filters">
+        <em>Status</em>
+        <button class="chip is-active" data-filter-status="all">Any</button>
+        <button class="chip" data-filter-status="active">Still answering</button>
+        <button class="chip" data-filter-status="quiet">Gone quiet</button>
+      </div>
+      <div class="result-line" id="catalog-count">18 machines</div>
+    </div>
+
+    <div id="catalog-grid"></div>
+    <div class="empty" id="catalog-empty" hidden>
+      <p style="margin:0 0 8px">Nothing matches that. Try <em>rover</em>, <em>helicopter</em> or <em>1976</em>.</p>
+      <p class="fineprint" style="margin:0">Everything here is NASA-sourced; nothing is invented.</p>
+    </div>
+
+    <p class="note" style="margin-top:34px">Reading this at school? Every story is written in short sentences and uses only the words in the <a href="index.html#glossary" class="blue">glossary</a>. Start with Apollo 11, then Viking 1, then Opportunity — that is the story in order.</p>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:18px">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span>Abandoned but<br>not Forgotten<small>Space Apps 2026</small></span>
+        </a>
+        <p class="small" style="max-width:40ch">A 3D storytelling build for the 2026 NASA Space Apps Challenge. Written for school-age space fans; every fact sourced to NASA.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html#flight">The flight</a></li>
+          <li><a href="index.html#hall">The artifact hall</a></li>
+          <li><a href="index.html#explorer">Where they are now</a></li>
+          <li><a href="index.html#signal">Listening room</a></li>
+          <li><a href="index.html#timeline">Timeline</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>The story</h4>
+        <ul>
+          <li><a href="#catalog">All 18 machines</a></li>
+          <li><a href="about.html">About &amp; sources</a></li>
+          <li><a href="index.html#why">Why they were left behind</a></li>
+          <li><a href="index.html#glossary">Words to know</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>NASA sources</h4>
+        <ul>
+          <li><a href="https://www.spaceappschallenge.org/2026/" target="_blank" rel="noopener">Space Apps Challenge 2026</a></li>
+          <li><a href="https://science.nasa.gov/moon/" target="_blank" rel="noopener">NASA — Moon</a></li>
+          <li><a href="https://science.nasa.gov/mars/" target="_blank" rel="noopener">NASA — Mars</a></li>
+          <li><a href="https://science.nasa.gov/mission/voyager/" target="_blank" rel="noopener">NASA — Voyager</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="credits">
+        <span>Surface maps: Solar System Scope (CC BY 4.0).</span>
+        <span>Facts: NASA · NASA Space Science Data Coordinated Archive.</span>
+      </div>
+      <div><span>Built as a challenge entry · <span data-year>2026</span></span></div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="object-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Machine story">
+  <div class="modal-backdrop"></div>
+  <div class="modal__in" data-modal-scroll>
+    <button class="modal__close" data-modal-close aria-label="Close story">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+    </button>
+    <div data-modal-body></div>
+  </div>
+</div>
+
+<script src="vendor/three.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/data.js"></script>
+<script src="js/hw.js"></script>
+<script src="js/artifacts.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>

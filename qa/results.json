@@ -1,0 +1,487 @@
+{
+  "pass": 96,
+  "fail": 0,
+  "warn": 0,
+  "results": [
+    [
+      "PASS",
+      "loader lifts (does not trap the visitor)",
+      "4847 ms"
+    ],
+    [
+      "PASS",
+      "boot is brisk",
+      "4847 ms"
+    ],
+    [
+      "PASS",
+      "no requests leave the machine (fully offline-capable)",
+      "18 requests, all local"
+    ],
+    [
+      "PASS",
+      "all five surface maps were loaded",
+      "5 textures"
+    ],
+    [
+      "PASS",
+      "Three.js loaded",
+      "r128"
+    ],
+    [
+      "PASS",
+      "all six modules registered",
+      "hall, journey, globes, signal, timeline, viewer"
+    ],
+    [
+      "PASS",
+      "Balanced is the light default (30 fps cap, sub-1x render)",
+      "balanced · cap 30 fps · scale 0.75"
+    ],
+    [
+      "PASS",
+      "every 3D scene built",
+      "hall, flight, globes, signal"
+    ],
+    [
+      "PASS",
+      "readiness contract satisfied",
+      "{\"total\":4,\"ok\":4}"
+    ],
+    [
+      "PASS",
+      "rendering at a usable frame rate",
+      "30 fps"
+    ],
+    [
+      "PASS",
+      "flight scene is actually drawing geometry",
+      "10248 triangles, 38 draw calls"
+    ],
+    [
+      "PASS",
+      "zero page errors on load",
+      ""
+    ],
+    [
+      "PASS",
+      "no failed requests",
+      ""
+    ],
+    [
+      "PASS",
+      "hero copy is readable at the top",
+      "opacity 1.000"
+    ],
+    [
+      "PASS",
+      "no story beat intrudes on the hero",
+      "0 visible"
+    ],
+    [
+      "PASS",
+      "live readout is populated",
+      "384,400 km · 1.28 s · 000%"
+    ],
+    [
+      "PASS",
+      "Balanced keyframes the flight instead of repainting every scroll tick",
+      "0 WebGL frames for the scroll step"
+    ],
+    [
+      "PASS",
+      "Full motion restores the camera fly-through",
+      "z 21.03 → -15.23"
+    ],
+    [
+      "PASS",
+      "hero copy has scrolled away",
+      "opacity 0.000"
+    ],
+    [
+      "PASS",
+      "exactly one story beat is visible mid-flight",
+      "1.00, 0.00, 0.00, 0.00"
+    ],
+    [
+      "PASS",
+      "each of the four beats takes its turn",
+      "0,1,2,3 (one at a time)"
+    ],
+    [
+      "PASS",
+      "the four beats are all reachable",
+      "4/4 cues"
+    ],
+    [
+      "PASS",
+      "the journey reaches the Mars leg",
+      "z -15.23 → -360.06"
+    ],
+    [
+      "PASS",
+      "progress HUD advances",
+      "4 of 4 lit"
+    ],
+    [
+      "PASS",
+      "six machines stand on six plinths",
+      "apollo11lm, apollo17lm, surveyor1, opportunity, ingenuity, insight"
+    ],
+    [
+      "PASS",
+      "the hall walks from the first machine",
+      "01 / 06 Apollo 11 LM “Eagle”"
+    ],
+    [
+      "PASS",
+      "the hall walks forward with scroll",
+      "0 → 5"
+    ],
+    [
+      "PASS",
+      "each machine shows its own specs",
+      "3/3/3"
+    ],
+    [
+      "PASS",
+      "status tag is rendered per machine",
+      "Silent — no signal since Left 20 July 1969 · Silent — no signal since 7 January 1967 · Retired — power lost 15 December 2022"
+    ],
+    [
+      "PASS",
+      "dragging turns the machine in front of you",
+      "Δ5.124 rad"
+    ],
+    [
+      "PASS",
+      "the hall is drawing its six models",
+      "5884 triangles/frame"
+    ],
+    [
+      "PASS",
+      "the Moon list shows its six machines",
+      "6 rows"
+    ],
+    [
+      "PASS",
+      "choosing a machine updates its story card",
+      "Apollo 11 “Eagle” descent stage"
+    ],
+    [
+      "PASS",
+      "coordinates are shown to three decimals",
+      "0.674° N / 23.473° E20 July 1969"
+    ],
+    [
+      "PASS",
+      "distance-to-Earth readout is live",
+      "384,400 km"
+    ],
+    [
+      "PASS",
+      "radio light-time readout is live",
+      "1.28 sfor radio to reach the Moon right now — 384,400 km away (mean)Satellites in low Eart"
+    ],
+    [
+      "PASS",
+      "the camera has flown toward that spot",
+      "cam 7.51,0.32,-3.26"
+    ],
+    [
+      "PASS",
+      "the Mars list shows its ten machines",
+      "10 rows"
+    ],
+    [
+      "PASS",
+      "clicking a marker on the globe selects that machine",
+      "Viking 1 lander → Phoenix"
+    ],
+    [
+      "PASS",
+      "the fly-to animation ran and the camera holds the pin",
+      "camera -4.84, 6.13, 2.47"
+    ],
+    [
+      "PASS",
+      "deep space shows the solar-system diagram",
+      "2 probes · SunVoyager 1164 AU22h 42m one-wayVoyager 2137 AU18h 59m one-way0 AU40 "
+    ],
+    [
+      "PASS",
+      "both Voyagers are listed",
+      "2 rows"
+    ],
+    [
+      "PASS",
+      "searching the list narrows it",
+      "5 matches: Pathfinder + SojournerAres | SpiritGusev Crater, a poss | OpportunityPerseverance Va"
+    ],
+    [
+      "PASS",
+      "the marsquake plays back",
+      "SOL 1222 · 0.0 s → SOL 1222 · 2.4s of 92s"
+    ],
+    [
+      "PASS",
+      "seismogram is drawn on the canvas",
+      "2294 painted pixels"
+    ],
+    [
+      "PASS",
+      "magnitude and quake count readouts are live",
+      "M 5.0 (Sol 1222) · 900 quakes"
+    ],
+    [
+      "PASS",
+      "switching to the helicopter changes the stage",
+      "ingenuity, 2500 tris"
+    ],
+    [
+      "PASS",
+      "the final downlink streams in",
+      "88% transferred"
+    ],
+    [
+      "PASS",
+      "telemetry log lines arrive in order",
+      "5 lines · last: relay: MRO overhead in 40 minutes — handoff arme"
+    ],
+    [
+      "PASS",
+      "the Voyager command starts its journey",
+      "24.50B km from Earth · 9.8 hours of 22.7 h"
+    ],
+    [
+      "PASS",
+      "the outbound leg draws progress on the DSN line",
+      "21% · command travelling out at light speed (22h 42m)"
+    ],
+    [
+      "PASS",
+      "the timeline carries every dated step",
+      "16 entries, 24 machine chips"
+    ],
+    [
+      "PASS",
+      "the spine fills as you read",
+      "scaleY(0.0472) → scaleY(0.9381)"
+    ],
+    [
+      "PASS",
+      "entries light up when they come into view",
+      "3 → 14 lit"
+    ],
+    [
+      "PASS",
+      "the playhead knob is visible while reading",
+      "opacity 1.00"
+    ],
+    [
+      "PASS",
+      "a timeline chip opens the story modal",
+      "Surveyor 1 (1 / 18)"
+    ],
+    [
+      "PASS",
+      "the modal spins the machine in 3D",
+      "surveyor · 2332 tris"
+    ],
+    [
+      "PASS",
+      "the story carries facts, science and sources",
+      "6 specs · 5 bullets · 3 stats · 2 NASA links"
+    ],
+    [
+      "PASS",
+      "arrow keys step between machines",
+      "Surveyor 1 → Surveyor 3"
+    ],
+    [
+      "PASS",
+      "Escape closes the modal and unlocks scrolling",
+      "closed"
+    ],
+    [
+      "PASS",
+      "a shared link opens straight into a story",
+      "InSight"
+    ],
+    [
+      "PASS",
+      "deep-linked page has no errors",
+      ""
+    ],
+    [
+      "PASS",
+      "all eighteen machines are catalogued",
+      "18 machines"
+    ],
+    [
+      "PASS",
+      "catalogue is interactive almost immediately",
+      "961 ms to ready"
+    ],
+    [
+      "PASS",
+      "each card names its machine",
+      "surveyor1, surveyor3, apollo11lm, apollo12lm, apollo15lm, apollo17lm"
+    ],
+    [
+      "PASS",
+      "the Moon filter works",
+      "6 cards"
+    ],
+    [
+      "PASS",
+      "the “still answering” filter works",
+      "curiosity, perseverance, voyager1, voyager2"
+    ],
+    [
+      "PASS",
+      "search finds the helicopter",
+      "ingenuity"
+    ],
+    [
+      "PASS",
+      "an empty search explains itself",
+      "empty state shown"
+    ],
+    [
+      "PASS",
+      "a catalogue card opens the 3D story",
+      "Opportunity (MER-B) · 2800 tris"
+    ],
+    [
+      "PASS",
+      "no errors on the catalogue page",
+      ""
+    ],
+    [
+      "PASS",
+      "about page lists every NASA source",
+      "18 links"
+    ],
+    [
+      "PASS",
+      "the FAQ opens on click",
+      "5 questions"
+    ],
+    [
+      "PASS",
+      "live readouts are populated there too",
+      "229.93M km"
+    ],
+    [
+      "PASS",
+      "footer year is current",
+      "2026"
+    ],
+    [
+      "PASS",
+      "no errors on the about page",
+      ""
+    ],
+    [
+      "PASS",
+      "no horizontal overflow on a phone",
+      "0px"
+    ],
+    [
+      "PASS",
+      "hero copy survives the small screen",
+      "opacity 1.00"
+    ],
+    [
+      "PASS",
+      "story blocks fit the viewport",
+      "all blocks within width"
+    ],
+    [
+      "PASS",
+      "the mobile menu opens",
+      "sheet is-open"
+    ],
+    [
+      "PASS",
+      "the hall reads properly on a phone",
+      "Surveyor 1, panel 354px wide"
+    ],
+    [
+      "PASS",
+      "the explorer is usable on a phone",
+      "6 rows, Surveyor 1"
+    ],
+    [
+      "PASS",
+      "no errors on mobile",
+      ""
+    ],
+    [
+      "PASS",
+      "reduced-motion visitors still get the whole site",
+      "loader lifted, 3D still present"
+    ],
+    [
+      "PASS",
+      "the ticker stops for reduced motion",
+      "animation: none"
+    ],
+    [
+      "PASS",
+      "a WebGL fallback message exists in the DOM",
+      ".webgl-note present"
+    ],
+    [
+      "PASS",
+      "the motion control switches to Calm",
+      "calm · 20 fps"
+    ],
+    [
+      "PASS",
+      "Calm keeps the hero canvas still while copy remains scrollable",
+      "7 → 7 WebGL frames"
+    ],
+    [
+      "PASS",
+      "no errors with reduced motion",
+      ""
+    ],
+    [
+      "PASS",
+      "all eighteen catalogued machines are present",
+      "18 objects"
+    ],
+    [
+      "PASS",
+      "every machine cites NASA",
+      "no missing or non-https sources"
+    ],
+    [
+      "PASS",
+      "every machine has a written story",
+      "0 too short"
+    ],
+    [
+      "PASS",
+      "stories stay short-sentence for school readers",
+      "0 over-long stories"
+    ],
+    [
+      "PASS",
+      "every surface machine has coordinates",
+      "18 objects, 16 with lat/lon"
+    ],
+    [
+      "PASS",
+      "status spread matches the pitch (14 quiet · 2 working · 2 flying)",
+      "{\"silent\":12,\"retired\":2,\"active\":2,\"travelling\":2}"
+    ],
+    [
+      "PASS",
+      "glossary, gallery and timeline are stocked",
+      "8 terms · 6 in the hall · 16 timeline entries"
+    ]
+  ]
+}

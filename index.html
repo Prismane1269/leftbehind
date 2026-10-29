@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abandoned but not Forgotten — the machines NASA left on the Moon and Mars</title>
+<meta name="description" content="A 3D story for the NASA Space Apps Challenge 2026: the landers, rovers and probes NASA left behind on the Moon, on Mars and in deep space — and the science they made possible.">
+<meta name="theme-color" content="#04060b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230b3d91'/%3E%3Ccircle cx='12' cy='12' r='6' fill='%23dfe8f5'/%3E%3Ccircle cx='21' cy='21' r='5' fill='%237a4b34'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body class="page-home">
+
+<!-- ══════════════════════════════════════════════════════ loader -->
+<div id="loader">
+  <div class="loader-in">
+    <div class="loader-top">
+      <b>Abandoned but not Forgotten</b>
+      <span>Space Apps Challenge 2026</span>
+    </div>
+    <div class="loader-bar"><i id="loader-fill"></i></div>
+    <div class="loader-top" style="margin-top:12px">
+      <span id="loader-status">spinning up the renderer</span>
+      <span id="loader-pct">00</span>
+    </div>
+    <div class="loader-log mono">
+      <div>mission log · 18 objects catalogued</div>
+      <div><b>moon</b> 6 objects · <b>mars</b> 10 objects · <b>deep space</b> 2 objects</div>
+      <div>surface maps: CC BY 4.0 Solar System Scope · live light-time: computed locally</div>
+      <div class="ok">no network calls · everything on this site ships with the site</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ nav -->
+<header class="nav" id="site-head">
+  <div class="nav__in">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span>Abandoned but<br>not Forgotten<small>Space Apps 2026</small></span>
+    </a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#flight" data-spy="flight">The flight</a>
+      <a href="#hall" data-spy="hall">The hall</a>
+      <a href="#explorer" data-spy="explorer">Where they are</a>
+      <a href="#signal" data-spy="signal">Listening room</a>
+      <a href="#timeline" data-spy="timeline">Timeline</a>
+      <a href="catalog.html">Catalogue</a>
+    </nav>
+    <div class="nav__cta">
+      <button class="motion" type="button" data-motion-toggle aria-label="Motion level: Balanced">
+        <span class="motion__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="motion__txt"><b data-motion-label>Balanced</b><small>motion</small></span>
+      </button>
+      <a class="btn btn--sm btn--primary" href="catalog.html"><span class="dot"></span>All 18 machines</a>
+    </div>
+    <button class="burger" data-nav-toggle aria-expanded="false" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="sheet" id="nav-sheet">
+  <div class="wrap">
+    <a href="#flight">The flight</a>
+    <a href="#hall">The hall — turn the hardware in 3D</a>
+    <a href="#explorer">Where they are now</a>
+    <a href="#signal">Listening room</a>
+    <a href="#timeline">Timeline 1966 → today</a>
+    <a href="#why">Why they were left behind</a>
+    <a href="#glossary">Words to know</a>
+    <a href="catalog.html">The catalogue — 18 machines</a>
+    <a href="about.html">About this build</a>
+    <button class="sheet-motion" type="button" data-motion-toggle aria-label="Motion level: Balanced">
+      <span>Motion level<small>tap to change</small></span><b data-motion-label>Balanced</b>
+    </button>
+    <a class="btn btn--primary" href="catalog.html">Open the catalogue</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ 01 · the flight -->
+<section class="journey" id="flight" style="--journey-len:340vh">
+  <div class="journey__pin">
+    <div class="journey__frame"><canvas id="flight-canvas"></canvas></div>
+
+    <div class="journey__ui">
+      <div class="hero-copy">
+        <span class="hero-badge"><s aria-hidden="true"></s>NASA Space Apps Challenge 2026 · Abandoned but not Forgotten</span>
+        <h1 class="display hero-title">We left our machines on the Moon and on Mars. They are still there.</h1>
+        <p class="lede hero-lede">A descent stage at Tranquility Base. Rovers parked in the dust. Fourteen machines that have gone quiet, and four that still answer. Scroll through a few light 3D waypoints — then turn the hardware in your hands.</p>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn btn--primary" href="#hall"><span class="dot"></span>Enter the hall</a>
+        <a class="btn btn--ghost" href="#explorer">Find them on the map</a>
+      </div>
+
+      <div class="hero-stats">
+        <div><b>18</b><span>machines in this story</span></div>
+        <div><b>14</b><span>have gone silent</span></div>
+        <div><b>4</b><span>still answer</span></div>
+        <div><b data-live-mars>—</b><span>Earth to Mars today</span></div>
+        <div><b data-live-mars-light>—</b><span>radio one-way</span></div>
+      </div>
+
+      <article class="beat" data-side="left">
+        <span class="beat__no">01 · leaving Earth</span>
+        <h3>Everything starts with a launch</h3>
+        <p>Six days of flying gets a spacecraft to the Moon. Seven months gets it to Mars. Whatever you send has to work — because you cannot pop back to fix it.</p>
+        <div class="beat__meta"><span>Earth escape</span><span>Moon: ~3 days</span><span>Mars: ~7 months</span></div>
+      </article>
+
+      <article class="beat" data-side="right">
+        <span class="beat__no">02 · the Moon, our first workshop</span>
+        <h3>Twelve people walked here. They left 6 machines behind.</h3>
+        <p>Descent stages, rovers, a laser mirror and a robot called Surveyor 3 that Apollo 12 astronauts walked over to and cut pieces off. The Moon has no wind and no rain, so everything is exactly where it was left.</p>
+        <div class="beat__meta"><span>384,400 km away</span><span>radio delay 1.28 s</span><span>footprints since 1969</span></div>
+      </article>
+
+      <article class="beat" data-side="left">
+        <span class="beat__no">03 · Mars, the long quiet</span>
+        <h3>Ten machines, and a dust storm that ended one</h3>
+        <p>Viking landed in 1976 and sent home the first picture from another planet's surface. Spirit, Opportunity, Phoenix, InSight and Ingenuity have all gone quiet since. Curiosity and Perseverance are still driving.</p>
+        <div class="beat__meta"><span>average 225 million km</span><span>radio delay 5–20 min</span><span>1,319 marsquakes felt</span></div>
+      </article>
+
+      <article class="beat" data-side="right">
+        <span class="beat__no">04 · and two that never stopped</span>
+        <h3>Far past the planets, two Voyagers are still calling home</h3>
+        <p>Launched in 1977, both left the solar system. Their signal is weaker than a watch battery and takes more than 20 hours to reach us — but they answer. Voyager 2 is still the only visitor to Uranus and Neptune.</p>
+        <div class="beat__meta"><span>24 billion km</span><span>light-time ≈ 23 h</span><span>still flying</span></div>
+      </article>
+
+      <div class="journey-readout">
+        <div>distance to target <b>—</b></div>
+        <div>radio one-way <b>—</b></div>
+        <div>route flown <b>—</b></div>
+      </div>
+      <div class="hud" aria-hidden="true"><i class="is-on"></i><i></i><i></i><i></i></div>
+      <div class="scroll-cue"><span>scroll to fly</span><i aria-hidden="true"></i></div>
+    </div>
+    <p class="webgl-note">This browser cannot show 3D — the story below reads perfectly on its own.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ ticker -->
+<div class="strip" aria-hidden="true">
+  <div class="strip__row" id="strip-track"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ 02 · the hall -->
+<section class="section--tight" aria-labelledby="hall-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head__l">
+        <div class="sec-num">02 · the artifact hall</div>
+        <h2 class="h2" id="hall-title">Six machines, modelled from the real thing</h2>
+        <p class="lede">Scroll to walk the hall. Drag to spin whichever machine is in front of you. Every one of them was drawn in code for this project — no downloads, no photos standing in.</p>
+      </div>
+      <div class="pill-row">
+        <span class="tag tag--silent">4 silent</span>
+        <span class="tag tag--active">2 still working</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="hall" style="--gallery-len:300vh">
+  <div class="gallery__pin">
+    <div class="gallery__canvas"><canvas id="hall-canvas"></canvas></div>
+    <div class="gallery__veil" aria-hidden="true"></div>
+    <div class="hall-drag gallery-drag" aria-hidden="true"></div>
+
+    <div class="gallery__ui">
+      <div class="artifact-card hall-panel">
+        <div class="artifact-card__idx" data-hall-idx>01 / 06</div>
+        <h3 class="hall-name" data-hall-name>Apollo 11 LM “Eagle”</h3>
+        <div class="artifact-card__site" data-hall-site>Tranquility Base · The Moon</div>
+        <div class="hall-tagline"><span class="tag tag--silent" data-hall-tag>Silent</span></div>
+        <p class="hall-story" data-hall-story>The base of the first spacecraft to land humans on the Moon — and it is still there.</p>
+        <div class="specs hall-stats" data-hall-specs></div>
+        <div class="artifact-card__acts">
+          <button class="btn btn--primary btn--sm" data-hall-open data-object="apollo11lm">Open the full story</button>
+          <a class="btn btn--sm btn--ghost" href="catalog.html">All 18 machines</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery__nav">
+      <span class="gallery__hint">drag to turn it · scroll to walk the hall</span>
+      <div class="gallery__dots hall-dots">
+        <button data-hall-dot aria-label="Machine 1"></button>
+        <button data-hall-dot aria-label="Machine 2"></button>
+        <button data-hall-dot aria-label="Machine 3"></button>
+        <button data-hall-dot aria-label="Machine 4"></button>
+        <button data-hall-dot aria-label="Machine 5"></button>
+        <button data-hall-dot aria-label="Machine 6"></button>
+      </div>
+    </div>
+    <p class="webgl-note">3D is unavailable here — the six machines are in the catalogue below.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ 03 · three worlds -->
+<section class="section" id="worlds">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head__l">
+        <div class="sec-num">03 · three places</div>
+        <h2 class="h2">The hardware is spread across three very different places</h2>
+        <p class="lede">Some of it is a short radio call away. Some of it is a journey of years. Picking a world changes how long a message takes to arrive.</p>
+      </div>
+    </div>
+    <div class="grid grid--3">
+      <article class="card console console--pad" data-reveal>
+        <div class="card__glow" aria-hidden="true"></div>
+        <div class="card__top"><span class="card-body">Closest</span><span class="tag">384,400 km</span></div>
+        <h3 class="card__name" style="margin-top:14px">The Moon — 6 machines</h3>
+        <p class="card__body">Lunar landers sit exactly where they landed. A laser mirror left in 1969 still bounces light back to Earth tonight. Radio takes 1.28 seconds one way.</p>
+        <div class="card__foot">
+          <a class="btn btn--sm btn--ghost" href="#explorer">See them on the Moon →</a>
+        </div>
+      </article>
+      <article class="card console console--pad" data-reveal>
+        <div class="card__glow" aria-hidden="true"></div>
+        <div class="card__top"><span class="card-body">Farther out</span><span class="tag">≈225 million km</span></div>
+        <h3 class="card__name" style="margin-top:14px">Mars — 10 machines</h3>
+        <p class="card__body">Ten landers and rovers, seven of them silent. Radio delay swings between about 5 and 20 minutes as the two planets drift apart, so rovers often drive themselves.</p>
+        <div class="card__foot">
+          <a class="btn btn--sm btn--ghost" href="#explorer">See them on Mars →</a>
+        </div>
+      </article>
+      <article class="card console console--pad" data-reveal>
+        <div class="card__glow" aria-hidden="true"></div>
+        <div class="card__top"><span class="card-body">Beyond everything</span><span class="tag tag--travelling">Still flying</span></div>
+        <h3 class="card__name" style="margin-top:14px">Deep space — 2 machines</h3>
+        <p class="card__body">Two Voyagers have left the Sun's bubble and are still talking. Their light-time is measured in hours, not seconds. Nothing else we built is farther away.</p>
+        <div class="card__foot">
+          <a class="btn btn--sm btn--ghost" href="#signal">Call Voyager 1 →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ 04 · explorer -->
+<section class="section explorer" id="explorer">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head__l">
+        <div class="sec-num">04 · ground truth</div>
+        <h2 class="h2">Pick a machine and fly down to where it sits right now</h2>
+        <p class="lede">These are the documented landing and final-rest coordinates. Click a marker on the globe, or choose from the list, and the camera flies out on an arc to the spot. Distances and radio times are worked out in your browser, live.</p>
+      </div>
+      <div class="explorer__legend" style="position:static">
+        <span><i class="legend-dot" style="background:#8cbeff"></i>silent — Moon</span>
+        <span><i class="legend-dot" style="background:#ff8a5c"></i>silent — Mars</span>
+        <span><i class="legend-dot" style="background:#5af0b4"></i>still working</span>
+      </div>
+    </div>
+
+    <div class="explorer__stage explorer-stage">
+      <div class="explorer-body">
+        <aside class="explorer-side">
+          <div class="explorer-tabs">
+            <button class="chip is-active" data-body="moon">The Moon</button>
+            <button class="chip" data-body="mars">Mars</button>
+            <button class="chip" data-body="deep">Deep space</button>
+          </div>
+          <div class="search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
+            <input type="search" data-object-search placeholder="Search: rover, Surveyor, 2019…" aria-label="Search the hardware">
+          </div>
+          <div class="explorer-list" data-object-list role="list"></div>
+          <p class="fineprint">18 machines catalogued. Every one has a short story written for readers aged 10 and up.</p>
+        </aside>
+
+        <div class="explorer__canvas">
+          <canvas id="globe-canvas"></canvas>
+          <div class="explorer__hud explorer-hud" data-explorer-hud>
+            <span class="tag">click a marker to fly down</span>
+          </div>
+          <div class="explorer-hint">the world turns slowly · click a pin to lock on</div>
+          <div data-deep></div>
+        </div>
+      </div>
+
+      <div class="explorer-panel" data-explorer-panel>
+        <div class="explorer-panel__top">
+          <div>
+            <h3 data-explorer-name>—</h3>
+            <div class="explorer-meta" data-explorer-meta></div>
+          </div>
+          <span class="fineprint" data-explorer-stagetitle>The Moon</span>
+        </div>
+        <p class="lede" data-explorer-story style="max-width:86ch">—</p>
+        <div class="explorer-readout">
+          <div><span>distance from Earth</span><b data-explorer-distance>—</b></div>
+          <div data-explorer-coords></div>
+          <div data-explorer-light></div>
+        </div>
+        <div class="pill-row">
+          <button class="btn btn--sm btn--primary" data-object="apollo11lm">Open the full story</button>
+          <a class="btn btn--sm btn--ghost" href="catalog.html">Compare all 18</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ 05 · signal lab -->
+<section class="section" id="signal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head__l">
+        <div class="sec-num">05 · listening room</div>
+        <h2 class="h2">Three ways to hear the hardware</h2>
+        <p class="lede">A quake that InSight felt 350 million kilometres away. The final download from a broken helicopter. And a command you can send to a probe that has left the solar system.</p>
+      </div>
+    </div>
+
+    <div class="signal-grid">
+      <div class="signal-stage">
+        <div class="signal-stage__canvas">
+          <canvas id="signal-canvas"></canvas>
+          <div class="seismo-overlay" data-signal-panel="insight">
+            <div class="seismo-wrap">
+              <div class="scope__leg scope__leg--top">
+                <span>SEIS · Sol 1222 marsquake · 5.0</span>
+                <span>synthetic trace drawn from InSight's real event log</span>
+              </div>
+              <canvas id="seismo-canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="signal-stage__tabs">
+          <button class="chip is-on" data-signal-mode="insight">1 · Marsquake</button>
+          <button class="chip" data-signal-mode="ingenuity">2 · Last downlink</button>
+          <button class="chip" data-signal-mode="voyager">3 · Call Voyager 1</button>
+        </div>
+        <div class="signal-stage__badge"><span class="tag tag--active">listening</span></div>
+      </div>
+
+      <div>
+        <div class="signal-panel-in" data-signal-panel="insight">
+          <p class="kicker kicker--blue">InSight · 2018–2022</p>
+          <h3>Press play on a Marsquake</h3>
+          <p>InSight put a seismometer straight onto Martian ground and felt <b>1,319 quakes</b> in four years. The biggest, on Sol 1222, was about magnitude 5. This waveform is drawn to match the shape of that event: P-wave first, then the S-wave, then a slow surface rumble.</p>
+          <div class="signal-actions">
+            <button class="btn btn--primary btn--sm" data-seismo-play><span class="dot"></span>Play the record</button>
+            <button class="btn btn--ghost btn--sm" data-seismo-reset>Rewind</button>
+          </div>
+          <div class="signal-readout">
+            <div><span>playing</span><b data-seismo-clock>SOL 1222 · 0.0 s</b></div>
+            <div><span>magnitude</span><b data-seismo-mag>M 5.0 (Sol 1222)</b></div>
+            <div><span>quakes felt</span><b data-seismo-count>900</b></div>
+          </div>
+          <p class="note" style="margin-top:14px">InSight's last contact with Earth was 15 December 2022. Dust on its solar panels left it without power. It is still sitting in Elysium Planitia.</p>
+        </div>
+
+        <div class="signal-panel-in" data-signal-panel="ingenuity">
+          <p class="kicker kicker--blue">Ingenuity · the last flight</p>
+          <h3>Download the final frames</h3>
+          <p>The helicopter was built for <b>5 flights</b> and made <b>72</b>. On flight 72 a rotor blade broke and it never flew again. Watch its last data downlink come home through a Mars orbiter relay.</p>
+          <div class="signal-actions">
+            <button class="btn btn--primary btn--sm" data-burst-run><span class="dot"></span>Start the download</button>
+            <span class="tag tag--retired" data-burst-state>link idle</span>
+          </div>
+          <div class="progress"><i data-burst-fill></i></div>
+          <div class="log-box" data-burst-log></div>
+        </div>
+
+        <div class="signal-panel-in" data-signal-panel="voyager">
+          <p class="kicker kicker--blue">Voyager 1 · still answering</p>
+          <h3>Send a command and wait</h3>
+          <p>Voyager 1 is about <b data-voyager-dist>24.50B km from Earth</b>. Radio travels at the speed of light, so your command still needs the better part of a day to arrive — and the reply needs the same again on the way back.</p>
+          <div class="dsn">
+            <div class="dsn__route">
+              <div class="dsn__node"><b>Earth</b><span>Command</span></div>
+              <div class="dsn__line"><i data-voyager-bar></i></div>
+              <div class="dsn__node"><b>V1</b><span>24 billion km</span></div>
+            </div>
+            <div class="dsn__log">
+              <div><b>timeline</b> <span data-voyager-clock>0.0 hours of 22.7 h</span></div>
+              <div data-voyager-state>Outbound leg: the command is on its way at light speed.</div>
+            </div>
+            <div class="signal-actions">
+              <button class="btn btn--primary btn--sm" data-voyager-send><span class="dot dot--red"></span>Send command</button>
+              <span class="fineprint">1 second here = about 4 hours of real waiting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ 06 · timeline -->
+<section class="section" id="timeline">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head__l">
+        <div class="sec-num">06 · sixty years</div>
+        <h2 class="h2">1966 to today: the long story of leaving things behind</h2>
+        <p class="lede">Every machine in this story, in the order it arrived — and the moment each one went quiet. Tap a name to open its full story.</p>
+      </div>
+    </div>
+    <div class="timeline__rail">
+      <div class="timeline-rail">
+        <span class="timeline-fill" data-timeline-fill aria-hidden="true"></span>
+        <span class="timeline-knob" data-timeline-knob aria-hidden="true"></span>
+        <ol id="timeline-track" style="list-style:none;margin:0;padding:0"></ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ 07 · numbers -->
+<section class="section--tight" id="numbers">
+  <div class="wrap">
+    <div class="fact-row">
+      <div class="fact console"><b><span data-count="18">18</span></b><span>machines in this story</span></div>
+      <div class="fact console"><b><span data-count="14">14</span></b><span>have gone silent</span></div>
+      <div class="fact console"><b><span data-count="1319">1,319</span></b><span>marsquakes felt by one lander</span></div>
+      <div class="fact console"><b><span data-count="45.16">45.16</span> km</b><span>the Mars driving record</span></div>
+      <div class="fact console"><b><span data-count="24500000000">24.5B</span></b><span>km to Voyager 1</span></div>
+      <div class="fact console"><b><span data-count="1969">1969</span></b><span>a laser mirror still in use</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ 08 · why -->
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="split split--wideL">
+      <div>
+        <div class="sec-num">07 · why they were left behind</div>
+        <h2 class="h2">Nobody forgets these machines. They just cannot come home.</h2>
+        <p class="lede">“Discarded” sounds careless. It was the opposite — every one of these was left on purpose, for a reason an engineer could explain.</p>
+        <ul class="step-list" style="margin-top:26px">
+          <li>Coming home is expensive. Apollo could only fly the top half of its lander back, so the bottom half — engine, legs, gold foil — stayed on the Moon to save weight for the trip home.</li>
+          <li>Some finished the job. Opportunity was promised 90 days and drove for 14 years. When the dust storm finally won, there was nothing left to fix from Earth.</li>
+          <li>Some ran out of fuel, power or luck. Solar panels dust over. Batteries drain. A rotor breaks. A radio goes quiet mid-sentence.</li>
+          <li>Some are still working, which is the best outcome of all: Curiosity, Perseverance, and both Voyagers are still sending data today.</li>
+        </ul>
+      </div>
+      <div class="stack">
+        <div class="console console--pad">
+          <p class="fineprint">The science did not stop</p>
+          <p style="margin:10px 0 0;color:var(--ink-2)">Retroreflectors left by Apollo crews are still used tonight to measure the Moon's distance. InSight's quiet seismometer still hands scientists data about Mars's core. Ingenuity's flight log became the textbook for flying on other worlds.</p>
+        </div>
+        <div class="console console--pad">
+          <p class="fineprint">And we are going back</p>
+          <p style="margin:10px 0 0;color:var(--ink-2)">Future missions are already planning to visit, photograph and learn from hardware that has spent decades in the dust. Some of it, like the samples Perseverance is dropping, is waiting to be collected.</p>
+        </div>
+        <div class="console console--pad">
+          <p class="fineprint">Built for this challenge</p>
+          <p style="margin:10px 0 0;color:var(--ink-2)">This site was made for the 2026 NASA Space Apps Challenge brief “Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars” — written for school-age space fans, in the plainest words we could manage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ 09 · glossary -->
+<section class="section" id="glossary">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head__l">
+        <div class="sec-num">08 · words to know</div>
+        <h2 class="h2">The eight words that unlock the rest</h2>
+        <p class="lede">If you are reading this at school, start here. Every story on this site only uses these words and a handful of others, and each story is written in short sentences on purpose.</p>
+      </div>
+      <button class="btn btn--ghost btn--sm" data-glossary-toggle>Open all terms</button>
+    </div>
+    <div id="glossary-list"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ 10 · CTA -->
+<section class="section--tight">
+  <div class="wrap">
+    <div class="cta-panel">
+      <div class="split">
+        <div>
+          <p class="kicker kicker--red">NASA Space Apps Challenge · 14–15 November 2026</p>
+          <h2 class="h2">The challenge is open. The machines are waiting.</h2>
+          <p class="lede" style="margin-top:16px">Space Apps is the world's biggest space hackathon: one weekend, thousands of teams, real NASA data. This year's brief asks you to tell the story of equipment NASA left behind on the Moon and Mars — and to make it make sense to school-age space fans.</p>
+          <div class="cta-row">
+            <a class="btn btn--primary" href="catalog.html"><span class="dot"></span>Walk the catalogue</a>
+            <a class="btn btn--ghost" href="about.html">How this was built</a>
+            <a class="btn btn--red" href="https://www.spaceappschallenge.org/2026/" target="_blank" rel="noopener"><span class="dot dot--red"></span>spaceappschallenge.org ↗</a>
+          </div>
+          <p class="cta-note">Every fact on this site links to a NASA page. Nothing here loads from the internet at runtime — the whole build ships offline.</p>
+        </div>
+        <div class="stack">
+          <div class="console console--pad">
+            <p class="fineprint">Try this next</p>
+            <ul class="dots" style="margin-top:12px">
+              <li>Open Opportunity's story and find the 90-day warranty that lasted 14 years.</li>
+              <li>Play the Sol 1222 marsquake, then read how a seismometer hears a planet.</li>
+              <li>Send a command to Voyager 1 and watch 23 hours go by in 6 seconds.</li>
+              <li>Find the only machine on the Moon that humans have walked up to and touched.</li>
+            </ul>
+          </div>
+          <div class="console console--pad">
+            <div class="now-line">
+              <span>Earth → Mars now <b data-live-mars>—</b></span>
+              <span>radio delay <b data-live-mars-light>—</b></span>
+              <span>Earth → Moon <b data-live-moon-light>1.28 s</b></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ footer -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:18px">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span>Abandoned but<br>not Forgotten<small>Space Apps 2026</small></span>
+        </a>
+        <p class="small" style="max-width:40ch">A 3D storytelling build for the 2026 NASA Space Apps Challenge. Written for school-age space fans; every fact sourced to NASA.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#flight">The flight</a></li>
+          <li><a href="#hall">The artifact hall</a></li>
+          <li><a href="#explorer">Where they are now</a></li>
+          <li><a href="#signal">Listening room</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>The story</h4>
+        <ul>
+          <li><a href="catalog.html">All 18 machines</a></li>
+          <li><a href="catalog.html#catalog">The Moon (6)</a></li>
+          <li><a href="catalog.html">Mars (10)</a></li>
+          <li><a href="catalog.html">Deep space (2)</a></li>
+          <li><a href="about.html">About &amp; sources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>NASA sources</h4>
+        <ul>
+          <li><a href="https://www.spaceappschallenge.org/2026/" target="_blank" rel="noopener">Space Apps Challenge 2026</a></li>
+          <li><a href="https://science.nasa.gov/moon/" target="_blank" rel="noopener">NASA — Moon</a></li>
+          <li><a href="https://science.nasa.gov/mars/" target="_blank" rel="noopener">NASA — Mars</a></li>
+          <li><a href="https://science.nasa.gov/mission/voyager/" target="_blank" rel="noopener">NASA — Voyager</a></li>
+          <li><a href="https://www.nasa.gov/the-apollo-program/" target="_blank" rel="noopener">NASA — Apollo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="credits">
+        <span>Surface maps: Solar System Scope (CC BY 4.0) — Mars, Moon and Earth textures.</span>
+        <span>Facts and mission status: NASA and NASA Space Science Data Coordinated Archive.</span>
+        <span>3D hardware, physics of the readouts and all text: built for this entry.</span>
+      </div>
+      <div>
+        <span>Not affiliated with NASA. Built as a challenge entry · <span data-year>2026</span></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════ story modal -->
+<div class="modal" id="object-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Machine story">
+  <div class="modal-backdrop"></div>
+  <div class="modal__in" data-modal-scroll>
+    <button class="modal__close" data-modal-close aria-label="Close story">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+    </button>
+    <div data-modal-body></div>
+  </div>
+</div>
+
+<script src="vendor/three.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/data.js"></script>
+<script src="js/hw.js"></script>
+<script src="js/artifacts.js"></script>
+<script src="js/journey.js"></script>
+<script src="js/globes.js"></script>
+<script src="js/signal.js"></script>
+<script src="js/timeline.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>

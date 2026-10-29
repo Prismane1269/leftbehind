@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About this build — Abandoned but not Forgotten</title>
+<meta name="description" content="How this 3D storytelling site for the NASA Space Apps Challenge 2026 was built, what is real and what is modelled, and the full list of NASA sources.">
+<meta name="theme-color" content="#04060b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230b3d91'/%3E%3Ccircle cx='12' cy='12' r='6' fill='%23dfe8f5'/%3E%3Ccircle cx='21' cy='21' r='5' fill='%237a4b34'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body class="page-about">
+
+<div id="loader">
+  <div class="loader-in">
+    <div class="loader-top"><b>About this build</b><span>Space Apps 2026</span></div>
+    <div class="loader-bar"><i id="loader-fill"></i></div>
+    <div class="loader-top" style="margin-top:12px"><span id="loader-status">reading the mission log</span><span id="loader-pct">00</span></div>
+  </div>
+</div>
+
+<header class="nav is-solid" id="site-head">
+  <div class="nav__in">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span>Abandoned but<br>not Forgotten<small>Space Apps 2026</small></span>
+    </a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="index.html#flight">The flight</a>
+      <a href="index.html#hall">The hall</a>
+      <a href="index.html#explorer">Where they are</a>
+      <a href="index.html#signal">Listening room</a>
+      <a href="catalog.html">Catalogue</a>
+      <a href="about.html" aria-current="page">About</a>
+    </nav>
+    <div class="nav__cta">
+      <button class="motion" type="button" data-motion-toggle aria-label="Motion level: Balanced">
+        <span class="motion__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="motion__txt"><b data-motion-label>Balanced</b><small>motion</small></span>
+      </button>
+      <a class="btn btn--sm btn--primary" href="catalog.html"><span class="dot"></span>All 18 machines</a>
+    </div>
+    <button class="burger" data-nav-toggle aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="sheet" id="nav-sheet">
+  <div class="wrap">
+    <a href="index.html#flight">The flight</a>
+    <a href="index.html#hall">The artifact hall</a>
+    <a href="index.html#explorer">Where they are now</a>
+    <a href="index.html#signal">Listening room</a>
+    <a href="catalog.html">The catalogue</a>
+    <a href="about.html">About this build</a>
+    <button class="sheet-motion" type="button" data-motion-toggle aria-label="Motion level: Balanced">
+      <span>Motion level<small>tap to change</small></span><b data-motion-label>Balanced</b>
+    </button>
+  </div>
+</div>
+
+<main>
+<section class="page-head">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Home</a><span>/</span><span>About</span></div>
+    <p class="kicker kicker--blue">The brief, the build and the sources</p>
+    <h1 class="display" style="max-width:26ch">A story about hardware that cannot come home.</h1>
+    <p class="lede" style="margin-top:22px">This site answers one 2026 NASA Space Apps Challenge brief in full: tell the story of the equipment NASA has left on the Moon, on Mars and in deep space, and make it make sense to school-age space fans. Here is exactly how we did it — and what is real, what is measured, and what is drawn.</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <div class="sec-num">01 · the brief</div>
+        <h2 class="h2">What the challenge asked for</h2>
+        <p class="lede" style="margin-top:16px">“Since the 1960s, NASA has left hardware across the solar system — on the Moon, on Mars, and in deep space. From rovers and instruments that completed their science missions to probes still traveling away from Earth, this hardware varies widely in both its purpose and current level of functionality. Your challenge is to tell the story of some or all of this equipment that introduces school-age space enthusiasts to the hardware and the science it made possible.”</p>
+        <p class="note" style="margin-top:18px">Challenge brief, 2026 NASA Space Apps Challenge — “Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars”. Difficulty: Intermediate. Subjects: Astrophysics, Planets &amp; Moons, Space Exploration.</p>
+
+        <div class="sec-num" style="margin-top:54px">02 · how we answered it</div>
+        <h2 class="h2">Five decisions shaped this build</h2>
+        <ul class="step-list" style="margin-top:22px">
+          <li><b>Every machine is modelled in code.</b> Sixteen Three.js builders draw the actual hardware — descent stages, the wire-wheeled lunar rover, both Mars rover families, InSight's round solar panels, Voyager's dish and RTGs. No model files, no photos standing in for objects.</li>
+          <li><b>Nothing loads from the network at runtime.</b> Three.js is vendored, textures ship with the site, fonts are a system stack, and every diagram is drawn live. Open it on a laptop in a school with no internet and it still works.</li>
+          <li><b>Written down to the reader.</b> Short sentences, no jargon without a definition, and an eight-word glossary for the technical terms that cannot be avoided. Two of the six museum machines exist mainly to explain how things work.</li>
+          <li><b>The physics is computed, not quoted.</b> Light-time and Mars distance are worked out in your browser for today's date, so the numbers change as Earth and Mars move.</li>
+          <li><b>Every fact is traceable.</b> Each of the 18 machines carries its own NASA sources, printed inside its story. The full list is below.</li>
+        </ul>
+      </div>
+
+      <div class="stack">
+        <div class="credits-box">
+          <h3>What is real</h3>
+          <p><b>Coordinates, dates, distances travelled, mission statistics and mission status</b> — all from NASA mission pages, the NASA Space Science Data Coordinated Archive and NASA fact sheets. Each object's story links to its sources.</p>
+        </div>
+        <div class="credits-box">
+          <h3>What is measured live</h3>
+          <p>The Earth–Mars distance and the radio one-way light time are computed in your browser from a simplified Keplerian model using JPL mean orbital elements. It is good to roughly one percent — plenty to show why a Mars conversation always has a delay, but not a navigation tool.</p>
+          <p>The distance to the Moon is its mean value (384,400 km) because the real distance wobbles between about 356,500 km and 406,700 km over each month.</p>
+        </div>
+        <div class="credits-box">
+          <h3>What is drawn, not photographed</h3>
+          <p>The Sol 1222 marsquake animation uses a synthetic trace shaped to match the structure of the real event (P-wave, S-wave, surface waves) — InSight's own seismic data is not bundled here. The Ingenuity downlink log is a faithful dramatisation of the real final sols, not a verbatim transcript.</p>
+        </div>
+        <div class="credits-box">
+          <h3>Credits</h3>
+          <p>Surface maps of the Moon, Mars and Earth: <a href="https://www.solarsystemscope.com/textures/" target="_blank" rel="noopener" class="blue">Solar System Scope</a>, licensed CC BY 4.0, resized and re-compressed for the web.</p>
+          <p>Three.js (MIT). Everything else — text, geometry, diagrams, interface — written for this entry.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap">
+    <div class="sec-num">03 · accessibility and reading level</div>
+    <h2 class="h2">Built so a ten-year-old can drive it</h2>
+    <div class="grid grid--3" style="margin-top:26px">
+      <div class="console console--pad"><p class="fineprint">Motion</p><p style="color:var(--ink-2);margin:10px 0 0">Two levels, switched from the nav and remembered: <b>Balanced</b> (default) keeps the story scrollable but draws the hero only at spaced 3D waypoints and shows one detailed hall model at a time; <b>Calm</b> freezes the hero canvas, removes spin and parallax, and uses a 20 fps budget while the story and hall still scroll normally. System-level <span class="mono">prefers-reduced-motion</span> starts in Calm. No sound autoplays and nothing flashes.</p></div>
+      <div class="console console--pad"><p class="fineprint">Keyboard and touch</p><p style="color:var(--ink-2);margin:10px 0 0">The catalogue, story modals (Esc, ← →), filters and the listening room are fully operable without a mouse. The 3D viewers are drag-and-turn, and every 3D object also exists as text.</p></div>
+      <div class="console console--pad"><p class="fineprint">If 3D fails</p><p style="color:var(--ink-2);margin:10px 0 0">On a device without WebGL the scenes step aside and the readouts fall back to plain values — the whole story is still readable, searchable and sourced.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap">
+    <div class="sec-num">04 · sources</div>
+    <h2 class="h2">Every NASA page behind this story</h2>
+    <p class="lede" style="margin:16px 0 26px">These are the pages we read to write the 18 stories. They are also linked inside each object's modal, next to the facts they support.</p>
+    <ul class="src-list" id="source-list"></ul>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap">
+    <div class="sec-num">05 · questions</div>
+    <h2 class="h2">Things people ask</h2>
+    <div class="qa">
+      <div class="qa-item">
+        <button class="qa-q" aria-expanded="false">Why is some of this hardware still working after 50 years?<span aria-hidden="true">+</span></button>
+        <div class="qa-a"><p>Two reasons: no weather, and nuclear power. The Moon has no wind, rain or oxygen, so nothing rusts or erodes. And spacecraft that use radioisotope power make electricity from the heat of decaying plutonium instead of sunlight — no panels to dust over, no moving parts to break.</p></div>
+      </div>
+      <div class="qa-item">
+        <button class="qa-q" aria-expanded="false">Why did Apollo leave the bottom half of the lander on the Moon?<span aria-hidden="true">+</span></button>
+        <div class="qa-a"><p>Weight. The descent stage carried the landing engine, the legs and the fuel tanks — almost two tonnes. Flying that back to orbit would have needed far more fuel, so the ascent stage lifted off alone, leaving the base, the ladder and a plaque behind on purpose.</p></div>
+      </div>
+      <div class="qa-item">
+        <button class="qa-q" aria-expanded="false">Could we bring any of it home?<span aria-hidden="true">+</span></button>
+        <div class="qa-a"><p>In principle the Moon is reachable; Mars is much harder. Apollo did bring pieces home — the crew of Apollo 12 cut parts off Surveyor 3 and returned them to Earth, which is why we know how 31 months of lunar conditions affects a machine. Future missions plan to visit and sample more of it.</p></div>
+      </div>
+      <div class="qa-item">
+        <button class="qa-q" aria-expanded="false">Is this an official NASA site?<span aria-hidden="true">+</span></button>
+        <div class="qa-a"><p>No. It is an independent entry built for the 2026 NASA Space Apps Challenge, using publicly available NASA information and NASA-credited imagery. NASA does not endorse or review it.</p></div>
+      </div>
+      <div class="qa-item">
+        <button class="qa-q" aria-expanded="false">How long did it take, and what is it made of?<span aria-hidden="true">+</span></button>
+        <div class="qa-a"><p>It is a static site: hand-written HTML, CSS and vanilla JavaScript with the Three.js library vendored in. There is no build step, no framework and no backend, which is deliberate — the whole thing must survive being opened offline, on a school laptop, on the day of judging.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap">
+    <div class="cta-panel">
+      <div class="split">
+        <div>
+          <p class="kicker kicker--red">Ready when you are</p>
+          <h2 class="h2">Start with the descent stage at Tranquility Base</h2>
+          <p class="lede" style="margin-top:16px">Six machines you can turn in your hands, eighteen stories, and one listening room where the silence is the point.</p>
+          <div class="cta-row">
+            <a class="btn btn--primary" href="index.html#hall"><span class="dot"></span>Enter the hall</a>
+            <a class="btn btn--ghost" href="catalog.html">Walk the catalogue</a>
+          </div>
+        </div>
+        <div class="console console--pad">
+          <div class="now-line" style="display:grid;gap:12px">
+            <span>Earth → Mars right now <b data-live-mars>—</b></span>
+            <span>radio one-way <b data-live-mars-light>—</b></span>
+            <span>Earth → Moon <b data-live-moon-light>1.28 s</b></span>
+            <span>Voyager 1 → Earth <b>≈ 23 hours</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:18px">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span>Abandoned but<br>not Forgotten<small>Space Apps 2026</small></span>
+        </a>
+        <p class="small" style="max-width:40ch">A 3D storytelling build for the 2026 NASA Space Apps Challenge. Written for school-age space fans; every fact sourced to NASA.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html#flight">The flight</a></li>
+          <li><a href="index.html#hall">The artifact hall</a></li>
+          <li><a href="index.html#explorer">Where they are now</a></li>
+          <li><a href="index.html#signal">Listening room</a></li>
+          <li><a href="index.html#timeline">Timeline</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>The story</h4>
+        <ul>
+          <li><a href="catalog.html">All 18 machines</a></li>
+          <li><a href="index.html#why">Why they were left behind</a></li>
+          <li><a href="index.html#glossary">Words to know</a></li>
+          <li><a href="about.html">About &amp; sources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>NASA sources</h4>
+        <ul>
+          <li><a href="https://www.spaceappschallenge.org/2026/" target="_blank" rel="noopener">Space Apps Challenge 2026</a></li>
+          <li><a href="https://science.nasa.gov/moon/" target="_blank" rel="noopener">NASA — Moon</a></li>
+          <li><a href="https://science.nasa.gov/mars/" target="_blank" rel="noopener">NASA — Mars</a></li>
+          <li><a href="https://science.nasa.gov/mission/voyager/" target="_blank" rel="noopener">NASA — Voyager</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="credits">
+        <span>Surface maps: Solar System Scope (CC BY 4.0).</span>
+        <span>Facts: NASA · NASA Space Science Data Coordinated Archive.</span>
+        <span>Three.js (MIT) · everything else written for this entry.</span>
+      </div>
+      <div><span>Built as a challenge entry · <span data-year>2026</span></span></div>
+    </div>
+  </div>
+</footer>
+
+<script src="vendor/three.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/data.js"></script>
+<script src="js/hw.js"></script>
+<script src="js/artifacts.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>

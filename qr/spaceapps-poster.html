@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Abandoned but not Forgotten — challenge poster</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{--ink:#eef3fb;--ink-2:#b9c6da;--ink-3:#7d8ea6;--bg:#04060b;--line:rgba(255,255,255,.14);
+    --mono:"SFMono-Regular",ui-monospace,Menlo,Consolas,monospace;
+    --font:"Inter","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.55;
+    display:grid;place-items:center;min-height:100vh;padding:28px}
+  .poster{width:min(900px,100%);border:1px solid var(--line);border-radius:22px;padding:clamp(26px,4vw,54px);
+    background:radial-gradient(120% 140% at 8% 0%,rgba(11,61,145,.38),transparent 58%),
+      radial-gradient(100% 120% at 96% 100%,rgba(252,61,33,.18),transparent 58%),#05080f}
+  .row{display:grid;grid-template-columns:1fr auto;gap:clamp(22px,3.6vw,50px);align-items:center}
+  .kicker{font-family:var(--mono);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3);
+    display:flex;gap:10px;align-items:center;margin:0 0 16px}
+  .kicker::before{content:"";width:22px;height:1px;background:#fc3d21}
+  h1{margin:0;font-size:clamp(1.9rem,4.4vw,3.1rem);letter-spacing:-.03em;line-height:1.02;font-weight:600;max-width:18ch}
+  .lede{color:var(--ink-2);margin:18px 0 0;max-width:44ch;font-size:.98rem}
+  .facts{display:flex;gap:26px;flex-wrap:wrap;margin-top:26px;font-family:var(--mono)}
+  .facts b{display:block;font-size:1.15rem}
+  .facts span{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
+  .qr{background:#fff;padding:14px;border-radius:16px;width:clamp(180px,26vw,254px);
+    box-shadow:0 30px 80px -40px rgba(125,179,255,.85)}
+  .qr svg{display:block;width:100%;height:auto}
+  .qr-cap{margin:12px 0 0;text-align:center;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--ink-3)}
+  .foot{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;
+    gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:.62rem;color:var(--ink-3)}
+  .url{word-break:break-all;max-width:52ch}
+  @media (max-width:720px){.row{grid-template-columns:1fr}.qr{margin-inline:auto}}
+  @media print{body{background:#fff;color:#04060b;padding:0}
+    .poster{box-shadow:none;border-color:#ccc;background:#fff}
+    .lede,.foot,.kicker{color:#444} .facts span,.qr-cap{color:#666}}
+</style>
+</head>
+<body>
+  <article class="poster">
+    <div class="row">
+      <div>
+        <p class="kicker">NASA Space Apps Challenge 2026</p>
+        <h1>Abandoned but not Forgotten</h1>
+        <p class="lede">Storytelling about the NASA equipment we left on the Moon, on Mars and in deep space — and the science it made possible. Written for school-age space fans. Built as a 3D, works-offline web story.</p>
+        <div class="facts">
+          <div><b>18</b><span>machines told</span></div>
+          <div><b>6</b><span>you can turn in 3D</span></div>
+          <div><b>1966 → today</b><span>years of leaving things behind</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="qr"><svg width="330" height="330" class="segno"><g transform="scale(6)"><path fill="#fff" d="M0 0h55v55h-55z"/><path class="qrline" stroke="#04060b" d="M3 3.5h7m2 0h1m2 0h1m2 0h2m1 0h3m2 0h1m1 0h1m3 0h3m1 0h1m1 0h3m2 0h1m1 0h7m-49 1h1m5 0h1m2 0h2m4 0h1m2 0h3m1 0h2m1 0h3m3 0h10m1 0h1m5 0h1m-49 1h1m1 0h3m1 0h1m1 0h1m6 0h2m1 0h1m1 0h1m3 0h5m1 0h1m1 0h2m5 0h2m1 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h2m1 0h1m3 0h1m3 0h1m1 0h2m1 0h1m1 0h2m1 0h1m4 0h1m1 0h2m1 0h1m2 0h1m1 0h3m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m3 0h2m2 0h6m1 0h3m4 0h1m1 0h1m4 0h1m1 0h3m1 0h1m-49 1h1m5 0h1m1 0h1m1 0h1m1 0h2m2 0h4m2 0h1m3 0h2m3 0h1m1 0h6m3 0h1m5 0h1m-49 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-41 1h2m1 0h2m3 0h1m1 0h1m3 0h1m3 0h5m1 0h2m3 0h1m-38 1h1m1 0h5m2 0h2m4 0h2m3 0h7m3 0h2m3 0h6m1 0h5m-47 1h2m1 0h2m3 0h2m1 0h1m2 0h1m2 0h2m2 0h1m2 0h2m4 0h2m5 0h1m3 0h3m-44 1h1m2 0h7m3 0h6m3 0h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m4 0h2m3 0h1m-44 1h1m1 0h1m6 0h2m1 0h1m1 0h1m5 0h5m2 0h1m1 0h1m2 0h1m2 0h1m3 0h1m-44 1h2m1 0h3m3 0h2m1 0h5m3 0h4m1 0h1m2 0h3m3 0h3m1 0h2m2 0h1m1 0h4m-47 1h2m3 0h2m1 0h2m2 0h1m1 0h2m1 0h2m1 0h2m1 0h1m3 0h4m2 0h3m4 0h1m2 0h1m1 0h1m-48 1h2m2 0h4m3 0h2m2 0h1m1 0h1m2 0h3m1 0h1m1 0h1m6 0h2m1 0h1m1 0h2m3 0h1m3 0h2m-48 1h3m1 0h1m6 0h4m3 0h2m1 0h1m2 0h4m1 0h1m1 0h1m1 0h1m2 0h2m2 0h1m2 0h1m3 0h1m-48 1h1m3 0h2m1 0h1m1 0h1m2 0h1m1 0h1m4 0h2m1 0h3m3 0h2m4 0h6m1 0h2m2 0h1m-46 1h2m5 0h1m6 0h1m1 0h3m1 0h1m1 0h3m3 0h2m1 0h1m3 0h2m3 0h3m3 0h1m-48 1h2m3 0h3m3 0h1m2 0h1m3 0h2m1 0h3m2 0h1m1 0h1m2 0h4m3 0h3m4 0h1m1 0h2m-45 1h2m2 0h2m1 0h3m1 0h5m8 0h1m2 0h2m4 0h1m2 0h2m1 0h2m2 0h2m-45 1h4m2 0h1m2 0h4m2 0h6m1 0h1m3 0h2m3 0h4m1 0h2m4 0h3m-44 1h1m1 0h1m5 0h1m2 0h1m2 0h1m2 0h1m2 0h1m3 0h3m9 0h4m1 0h1m-46 1h1m2 0h5m2 0h2m3 0h2m1 0h2m1 0h6m3 0h1m1 0h3m2 0h1m1 0h5m1 0h3m-48 1h1m1 0h2m3 0h1m2 0h3m1 0h1m1 0h1m1 0h2m1 0h1m3 0h4m2 0h1m1 0h1m2 0h1m2 0h1m3 0h1m3 0h1m-47 1h1m1 0h1m1 0h1m1 0h1m1 0h1m3 0h4m1 0h4m1 0h1m1 0h2m1 0h3m1 0h5m2 0h1m1 0h1m1 0h5m-47 1h3m3 0h2m2 0h3m1 0h1m5 0h1m3 0h2m1 0h2m1 0h1m2 0h3m1 0h2m3 0h1m1 0h2m-47 1h2m1 0h6m2 0h1m2 0h1m2 0h1m1 0h1m1 0h5m4 0h4m1 0h11m1 0h1m-49 1h1m1 0h1m1 0h2m3 0h4m1 0h1m1 0h2m3 0h3m1 0h5m1 0h3m3 0h2m2 0h1m3 0h1m-45 1h2m1 0h4m1 0h1m3 0h1m1 0h2m2 0h1m1 0h1m2 0h2m5 0h1m3 0h2m2 0h1m1 0h2m1 0h3m1 0h1m-48 1h1m1 0h2m2 0h2m1 0h1m1 0h2m1 0h2m1 0h1m2 0h2m1 0h4m1 0h2m5 0h2m1 0h5m-44 1h3m3 0h1m1 0h2m3 0h1m3 0h1m1 0h1m2 0h2m1 0h1m2 0h1m4 0h2m1 0h1m1 0h5m4 0h2m-48 1h5m2 0h4m1 0h2m1 0h1m4 0h3m2 0h4m2 0h1m1 0h1m2 0h2m1 0h1m6 0h2m-49 1h4m1 0h2m2 0h5m2 0h2m2 0h2m1 0h1m1 0h2m4 0h1m3 0h2m1 0h4m1 0h4m1 0h1m-49 1h1m1 0h1m1 0h1m2 0h1m2 0h1m1 0h1m1 0h1m1 0h2m1 0h1m1 0h6m2 0h4m3 0h1m2 0h1m1 0h1m1 0h1m-44 1h1m1 0h2m1 0h5m3 0h1m2 0h2m3 0h1m1 0h3m2 0h1m2 0h6m1 0h1m3 0h4m1 0h2m-49 1h3m1 0h1m2 0h1m3 0h1m1 0h3m1 0h3m1 0h2m2 0h4m1 0h4m3 0h2m1 0h1m6 0h2m-44 1h2m1 0h2m3 0h2m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m3 0h3m3 0h2m1 0h4m2 0h1m1 0h2m-47 1h1m1 0h1m3 0h4m2 0h1m1 0h2m2 0h1m1 0h2m1 0h1m3 0h5m2 0h3m1 0h2m1 0h2m1 0h1m1 0h1m-47 1h1m3 0h3m2 0h1m1 0h3m1 0h2m1 0h2m3 0h2m1 0h1m3 0h2m1 0h1m2 0h6m3 0h3m-48 1h3m3 0h2m1 0h1m2 0h1m1 0h1m3 0h1m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h1m7 0h1m3 0h1m3 0h1m-49 1h3m3 0h3m3 0h4m1 0h1m1 0h8m4 0h1m1 0h1m1 0h14m-41 1h3m3 0h3m5 0h1m3 0h1m2 0h4m2 0h1m4 0h1m3 0h1m1 0h2m-48 1h7m8 0h1m1 0h1m1 0h4m1 0h1m1 0h1m2 0h1m1 0h5m2 0h1m1 0h1m1 0h1m1 0h1m3 0h1m-49 1h1m5 0h1m1 0h1m1 0h3m1 0h1m3 0h5m3 0h3m1 0h4m1 0h1m1 0h2m1 0h1m3 0h1m3 0h1m-49 1h1m1 0h3m1 0h1m1 0h1m2 0h1m2 0h2m6 0h5m2 0h3m1 0h4m3 0h5m1 0h1m1 0h1m-49 1h1m1 0h3m1 0h1m1 0h2m3 0h1m5 0h4m4 0h1m1 0h2m4 0h1m1 0h1m2 0h1m1 0h7m-49 1h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h1m1 0h2m1 0h2m2 0h3m1 0h2m3 0h2m1 0h1m1 0h1m4 0h1m-44 1h1m5 0h1m2 0h3m2 0h2m1 0h1m1 0h6m2 0h4m1 0h1m1 0h2m1 0h6m5 0h1m-49 1h7m1 0h2m2 0h1m2 0h2m1 0h1m1 0h1m2 0h2m1 0h2m2 0h2m2 0h4m2 0h2m4 0h3"/></g></svg></div>
+        <p class="qr-cap">Scan to open the challenge</p>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="url">https://www.spaceappschallenge.org/2026/challenges/abandoned-but-not-forgotten-storytelling-about-nasas-discarded-equipment-on-the-moon-and-mars/</span>
+      <span>Hackathon weekend: 14–15 November 2026</span>
+    </div>
+  </article>
+</body>
+</html>
