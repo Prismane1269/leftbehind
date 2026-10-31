@@ -245,12 +245,10 @@
         const cfg = LB.motion.cfg;
         const spin = cfg.spin;
         const fullMotion = LB.motion.level === 'full';
-        /* Balanced changes the large flight canvas only at coarse scroll
-           keyframes. Text stays continuous, but the 3D camera doesn't redraw on
-           every wheel tick; Full opts back into the smooth camera fly-through. */
-        const renderStep = fullMotion ? 0.00015 : (LB.motion.level === 'calm' ? Infinity : 0.12);
+        /* Smooth continuous camera choreography without stepping stutter */
+        const renderStep = LB.motion.level === 'calm' ? Infinity : 0.0008;
         const dirty = spin > 0 || Math.abs(p - lastRenderP) > renderStep ||
-          (fullMotion && (Math.abs(P.sx - lastSX) > 0.0003 || Math.abs(P.sy - lastSY) > 0.0003)) ||
+          (Math.abs(P.sx - lastSX) > 0.0003 || Math.abs(P.sy - lastSY) > 0.0003) ||
           spin !== lastSpin || LB.scaleRevision !== lastScaleRev;
 
         /* ---- camera choreography: Earth → Moon → Mars ---------------------- */

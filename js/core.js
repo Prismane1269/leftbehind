@@ -79,11 +79,12 @@
   /* [desktop, touch]. CSS pixels are a little softer than 1:1 on high-DPI
      screens, but cutting the buffer to 0.8× makes it ~64% fewer pixels than a
      2× device-pixel render. This is the important default for a scroll story. */
-  const SCALE = { full: [1.25, 1], balanced: [0.8, 0.75], calm: [0.68, 0.68] };
+  /* [desktop, touch]. Clamped to maintain crisp visuals on Retina displays while avoiding thermal throttling */
+  const SCALE = { full: [1.5, 1.25], balanced: [1.25, 1.0], calm: [0.85, 0.8] };
   const LEVELS = {
-    full:     { key: 'full',     label: 'Full',     parallax: 1,    spin: 1,    debris: 1,   cap: 30, hint: 'continuous camera and subtle 3D motion' },
-    balanced: { key: 'balanced', label: 'Balanced', parallax: 0, spin: 0, debris: 0, cap: 30, hint: 'steady 3D, no scroll spin or parallax' },
-    calm:     { key: 'calm',     label: 'Calm',     parallax: 0,    spin: 0,    debris: 0,   cap: 20, hint: 'still frames, no parallax, lightest load' }
+    full:     { key: 'full',     label: 'Full',     parallax: 1,    spin: 1,    debris: 1,   cap: 60, hint: 'continuous camera and subtle 3D motion' },
+    balanced: { key: 'balanced', label: 'Balanced', parallax: 1,    spin: 1,    debris: 1,   cap: 60, hint: 'crisp realistic 3D and smooth orbit' },
+    calm:     { key: 'calm',     label: 'Calm',     parallax: 0,    spin: 0,    debris: 0,   cap: 30, hint: 'still frames, lightest load' }
   };
   T.levels = LEVELS;
 

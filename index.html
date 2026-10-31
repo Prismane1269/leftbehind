@@ -266,6 +266,7 @@
           <div class="explorer-tabs">
             <button class="chip is-active" data-body="moon">The Moon</button>
             <button class="chip" data-body="mars">Mars</button>
+            <button class="chip" data-body="earth">Earth</button>
             <button class="chip" data-body="deep">Deep space</button>
           </div>
           <div class="search">
@@ -273,15 +274,15 @@
             <input type="search" data-object-search placeholder="Search: rover, Surveyor, 2019…" aria-label="Search the hardware">
           </div>
           <div class="explorer-list" data-object-list role="list"></div>
-          <p class="fineprint">18 machines catalogued. Every one has a short story written for readers aged 10 and up.</p>
+          <p class="fineprint">18 missions & sites catalogued. Every one has a short story written for readers aged 10 and up.</p>
         </aside>
 
         <div class="explorer__canvas">
           <canvas id="globe-canvas"></canvas>
           <div class="explorer__hud explorer-hud" data-explorer-hud>
-            <span class="tag">click a marker to fly down</span>
+            <span class="tag">drag to orbit · scroll/pinch to zoom · click pin to fly</span>
           </div>
-          <div class="explorer-hint">the world turns slowly · click a pin to lock on</div>
+          <div class="explorer-hint">drag planet to rotate · wheel to zoom · click markers</div>
           <div data-deep></div>
         </div>
       </div>

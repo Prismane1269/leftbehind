@@ -297,6 +297,21 @@
       legacy: 'For a generation of astronomers, Voyager 2’s pictures are still the only close-ups we have of the ice giants.',
       stats: [['Distance from Earth', '≈20–21 billion km'], ['Planets visited', '4'], ['Still working', 'Yes']],
       sources: [{ label: 'NASA — Voyager', url: NASA.voyager }, { label: 'NASA — Mars fact sheet', url: NASA.factMars }]
+    },
+    /* ============================================================== EARTH */
+    {
+      id: 'ksc', name: 'Kennedy Space Center (LC-39)', short: 'Kennedy Space Center',
+      type: 'Spaceport & Launch Complex', body: 'earth', model: 'apollo11lm',
+      lat: 28.5729, lon: -80.6490, site: 'Cape Canaveral, Florida, Earth',
+      landed: 'Established 1962', landedYear: 1962, lastContact: 'Active launch base', lastYear: 2026,
+      status: 'active', mass: 'Historic site', power: 'Terrestrial grid',
+      headline: 'The launchpad that sent humanity and robotic explorers to the Moon, Mars, and beyond.',
+      story: 'Every Apollo Saturn V rocket, the Space Shuttles, and flagship missions to Mars and deep space began their journey from these pads in Florida. It is the starting point for every machine catalogued in this project.',
+      science: ['Launch complex 39A & 39B for Apollo, Shuttle, and Artemis', 'Gateway for interplanetary trajectories', 'Historic home of America’s human spaceflight'],
+      leftBehind: ['Historic crawler-transporters and gantry structures', 'The pads that pushed humanity beyond Low Earth Orbit'],
+      legacy: 'Where Earth reached out to the stars — the origin of every journey in this museum.',
+      stats: [['Location', '28.57°N 80.65°W'], ['Apollo launches', '13 Saturn V'], ['Status', 'Active']],
+      sources: [{ label: 'NASA — Kennedy Space Center', url: 'https://www.nasa.gov/kennedy/' }, { label: 'NASA — Apollo Program', url: NASA.apollo }]
     }
   ];
 
@@ -304,6 +319,7 @@
   const BODY_META = {
     moon: { label: 'The Moon', color: '#cfd6e4', accent: '#8fb4ff', distanceKm: 384400, miles: '238,855 mi' },
     mars: { label: 'Mars', color: '#e2734a', accent: '#ff8a5c', distanceKm: 225000000, miles: 'varies' },
+    earth: { label: 'Earth', color: '#68b4ff', accent: '#4f8fe0', distanceKm: 0, miles: '0 mi' },
     deep: { label: 'Deep space', color: '#a78bfa', accent: '#c4b5fd', distanceKm: null }
   };
 
@@ -315,6 +331,7 @@
     /* groups used by the UI */
     moon: OBJECTS.filter((o) => o.body === 'moon'),
     mars: OBJECTS.filter((o) => o.body === 'mars'),
+    earth: OBJECTS.filter((o) => o.body === 'earth'),
     deep: OBJECTS.filter((o) => o.body === 'deep'),
     byId(id) { return OBJECTS.filter((o) => o.id === id)[0] || null; },
     /* the six pieces of hardware that get the full 3D treatment */
