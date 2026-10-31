@@ -239,7 +239,7 @@
       this.update = (t, dt, S, P) => {
         if (LB.modalOpen) return;                   /* a story modal is on top */
         const prog = S.progress(section);           // exact scroll
-        p = U.damp(p, prog, 14, dt);                // visual (eased)
+        p = U.damp(p, prog, 6, dt);                 // gentle, silky cinematic easing
         const r = S.rectOf(section);
         if (r.bottom < -40 || r.top > innerHeight + 40) return;
         const cfg = LB.motion.cfg;

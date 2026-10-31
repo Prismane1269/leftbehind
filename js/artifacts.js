@@ -342,12 +342,10 @@
         const prog = S.progress(section);
         const local = U.range(prog, 0.04, 0.96);
         const target = local * (objects.length - 1);
-        const oldPos = pos;
-        /* Balanced snaps only when a new machine takes the foreground. It does
-           not continuously scrub a six-object WebGL scene with the scroll bar. */
-        pos = fullMotion ? U.damp(pos, target, 6, dt) : target;
-        let dirty = (fullMotion && Math.abs(pos - oldPos) > 0.0002) || LB.scaleRevision !== lastScaleRev;
-        const displayPos = fullMotion ? pos : Math.round(pos);
+        /* Smooth damped transition so machines turn gracefully between scroll positions */
+        pos = U.damp(pos, target, 4.5, dt);
+        let dirty = Math.abs(pos - oldPos) > 0.0002 || LB.scaleRevision !== lastScaleRev;
+        const displayPos = pos;
         ring.rotation.y = -displayPos * STEP;
         activeIndex = U.clamp(Math.round(pos), 0, objects.length - 1);
         showInfo(activeIndex);
